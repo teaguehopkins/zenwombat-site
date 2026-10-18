@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T23:23:30+00:00",
+  "title": "Design System: Zen Wombat",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Tube Black",
+        "canonical": "#07090c",
+        "tonalRamp": [
+          "#0f131a",
+          "#1e2734",
+          "#313f54",
+          "#475c7a",
+          "#5e79a1",
+          "#8b9ebb",
+          "#b8c4d6",
+          "#e5eaf0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Phosphor Ink",
+        "canonical": "#dcefff",
+        "tonalRamp": [
+          "#001629",
+          "#002c52",
+          "#004885",
+          "#0069c2",
+          "#008aff",
+          "#47abff",
+          "#8fccff",
+          "#d6ecff"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Dim Phosphor",
+        "canonical": "#9db2c2",
+        "tonalRamp": [
+          "#101519",
+          "#1f2a32",
+          "#334452",
+          "#4a6477",
+          "#62849d",
+          "#8ea6b9",
+          "#bac9d4",
+          "#e6ebef"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Phosphor",
+        "canonical": "#5d7080",
+        "tonalRamp": [
+          "#111518",
+          "#22292f",
+          "#38434d",
+          "#526270",
+          "#6b8194",
+          "#95a4b2",
+          "#bec8d0",
+          "#e7ebee"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Phosphor Rule",
+        "canonical": "rgb(150 215 255 / 0.2)",
+        "tonalRamp": [
+          "#001929",
+          "#003352",
+          "#005285",
+          "#0078c2",
+          "#009eff",
+          "#47b9ff",
+          "#8fd4ff",
+          "#d6efff"
+        ]
+      },
+      "bloom": {
+        "role": "neutral",
+        "displayName": "Phosphor Bloom",
+        "canonical": "rgb(150 215 255 / 0.35)",
+        "tonalRamp": [
+          "#001929",
+          "#003352",
+          "#005285",
+          "#0078c2",
+          "#009eff",
+          "#47b9ff",
+          "#8fd4ff",
+          "#d6efff"
+        ]
+      },
+      "loot-field": {
+        "role": "neutral",
+        "displayName": "Loot Field",
+        "canonical": "#24170c",
+        "tonalRamp": [
+          "#1f140a",
+          "#3d2714",
+          "#634021",
+          "#915d30",
+          "#bf7a40",
+          "#d19f75",
+          "#e3c5ab",
+          "#f5eae0"
+        ]
+      },
+      "loot-gold": {
+        "role": "primary",
+        "displayName": "Loot Gold",
+        "canonical": "#f0c35a",
+        "tonalRamp": [
+          "#251b03",
+          "#4b3607",
+          "#7a580b",
+          "#b28110",
+          "#eaaa15",
+          "#f0c257",
+          "#f6da98",
+          "#fcf1da"
+        ]
+      },
+      "loot-cream": {
+        "role": "secondary",
+        "displayName": "Parchment Cream",
+        "canonical": "#f3dfb4",
+        "tonalRamp": [
+          "#231a06",
+          "#46340b",
+          "#725412",
+          "#a77b1b",
+          "#dca123",
+          "#e6bb61",
+          "#f0d69e",
+          "#f9f0dc"
+        ]
+      },
+      "loot-red": {
+        "role": "secondary",
+        "displayName": "Notification Red",
+        "canonical": "#d92b26",
+        "tonalRamp": [
+          "#230706",
+          "#450e0c",
+          "#711614",
+          "#a5211d",
+          "#d92b26",
+          "#e46663",
+          "#eea2a0",
+          "#f9dddc"
+        ]
+      },
+      "vec-field": {
+        "role": "neutral",
+        "displayName": "Vector Field",
+        "canonical": "#0a131a",
+        "tonalRamp": [
+          "#0b161d",
+          "#172b3b",
+          "#254660",
+          "#36668c",
+          "#4787b8",
+          "#7aa8cc",
+          "#aecae0",
+          "#e2ecf4"
+        ]
+      },
+      "vec-cyan": {
+        "role": "primary",
+        "displayName": "Phosphor Cyan",
+        "canonical": "#81d4fa",
+        "tonalRamp": [
+          "#021b27",
+          "#03374e",
+          "#055980",
+          "#0782ba",
+          "#0aabf5",
+          "#4ec3f8",
+          "#93dafb",
+          "#d8f2fd"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Game titles and the 404 headline; uppercase, condensed to 85%."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads such as the About title."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Studio name in the top strip, with phosphor bloom."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Play button label; width inherited from body."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Hooks and About prose, always 400 at 100% width."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Base system voice: tagline, notes, footer."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Facts line and controls bar, uppercase tracked mono."
+      }
+    },
+    "shadows": [
+      {
+        "name": "phosphor-bloom",
+        "value": "drop-shadow(0 0 6px rgb(150 215 255 / 0.35))",
+        "purpose": "Filter on wordmark and wombat glyph (10px on the large About glyph)."
+      },
+      {
+        "name": "cursor-bloom",
+        "value": "drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 60%, transparent))",
+        "purpose": "Filter on the selected cursor ship, in its row accent."
+      },
+      {
+        "name": "selected-lift",
+        "value": "0 8px 18px -8px rgb(0 0 0 / 0.7)",
+        "purpose": "Neutral black lift under the selected, filled Play. Not a glow."
+      },
+      {
+        "name": "badge-lift",
+        "value": "0 3px 6px rgb(0 0 0 / 0.5)",
+        "purpose": "Legends of Loot unread badge, matching the game."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "House easing for every transition."
+      },
+      {
+        "name": "row-field",
+        "value": "600ms",
+        "purpose": "Row background fading to its field on selection."
+      },
+      {
+        "name": "title-hook-color",
+        "value": "400ms",
+        "purpose": "Title and hook colour change on selection."
+      },
+      {
+        "name": "cursor",
+        "value": "300ms opacity, 500ms transform",
+        "purpose": "Cursor ship sliding in from 10px left."
+      },
+      {
+        "name": "play",
+        "value": "250ms",
+        "purpose": "Play fill, colour and lift; arrow nudge 300ms."
+      },
+      {
+        "name": "art-dim",
+        "value": "500ms",
+        "purpose": "Unselected art dims to opacity 0.72 and saturate 0.7 on pointer devices."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All transitions collapse under prefers-reduced-motion; the canvas respects it too."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "820px",
+        "purpose": "Max-width: rows stack art-first at 5:2, every row lit, cursor and controls bar hidden, strip min-height 56px."
+      },
+      {
+        "name": "coarse",
+        "value": "(hover: none), (pointer: coarse)",
+        "purpose": "Controls bar hidden."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Play Button, Legends of Loot, rest",
+      "kind": "button",
+      "refersTo": "button-play-loot",
+      "description": "Accent outline on an unselected row; the only button in the system.",
+      "html": "<div class=\"ds-wrap-loot\"><a class=\"ds-play\" href=\"#\">Play<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></div>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-wrap-loot{--accent:var(--loot-gold);--field:var(--loot-field);background:var(--ground);padding:24px;}.ds-play{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border:1.5px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);font-family:var(--display);font-weight:700;font-stretch:87.5%;font-size:1.125rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),box-shadow 250ms var(--ease-out);}.ds-play svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;transition:transform 300ms var(--ease-out);}.ds-play:hover svg,.ds-play:focus-visible svg{transform:translateX(4px);}.ds-play:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}.ds-play:active{transform:translateY(1px);}.ds-play--lit{background:var(--accent);color:var(--field);box-shadow:0 8px 18px -8px rgb(0 0 0 / 0.7);}"
+    },
+    {
+      "name": "Play Button, Legends of Loot, selected",
+      "kind": "button",
+      "refersTo": "button-play-loot-selected",
+      "description": "Lit slab on the selected row, accent fill with field-colour label.",
+      "html": "<div class=\"ds-wrap-loot\"><a class=\"ds-play ds-play--lit\" href=\"#\">Play<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></div>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-wrap-loot{--accent:var(--loot-gold);--field:var(--loot-field);background:var(--loot-field);padding:24px;}.ds-play{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border:1.5px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);font-family:var(--display);font-weight:700;font-stretch:87.5%;font-size:1.125rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),box-shadow 250ms var(--ease-out);}.ds-play svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;transition:transform 300ms var(--ease-out);}.ds-play:hover svg,.ds-play:focus-visible svg{transform:translateX(4px);}.ds-play:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}.ds-play:active{transform:translateY(1px);}.ds-play--lit{background:var(--accent);color:var(--field);box-shadow:0 8px 18px -8px rgb(0 0 0 / 0.7);}"
+    },
+    {
+      "name": "Play Button, Vector, rest",
+      "kind": "button",
+      "refersTo": "button-play-vector",
+      "description": "Accent outline on an unselected row; the only button in the system.",
+      "html": "<div class=\"ds-wrap-vector\"><a class=\"ds-play\" href=\"#\">Play<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></div>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-wrap-vector{--accent:var(--vec-cyan);--field:var(--vec-field);background:var(--ground);padding:24px;}.ds-play{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border:1.5px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);font-family:var(--display);font-weight:700;font-stretch:87.5%;font-size:1.125rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),box-shadow 250ms var(--ease-out);}.ds-play svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;transition:transform 300ms var(--ease-out);}.ds-play:hover svg,.ds-play:focus-visible svg{transform:translateX(4px);}.ds-play:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}.ds-play:active{transform:translateY(1px);}.ds-play--lit{background:var(--accent);color:var(--field);box-shadow:0 8px 18px -8px rgb(0 0 0 / 0.7);}"
+    },
+    {
+      "name": "Play Button, Vector, selected",
+      "kind": "button",
+      "refersTo": "button-play-vector-selected",
+      "description": "Lit slab on the selected row, accent fill with field-colour label.",
+      "html": "<div class=\"ds-wrap-vector\"><a class=\"ds-play ds-play--lit\" href=\"#\">Play<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></div>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-wrap-vector{--accent:var(--vec-cyan);--field:var(--vec-field);background:var(--vec-field);padding:24px;}.ds-play{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border:1.5px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);font-family:var(--display);font-weight:700;font-stretch:87.5%;font-size:1.125rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),box-shadow 250ms var(--ease-out);}.ds-play svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;transition:transform 300ms var(--ease-out);}.ds-play:hover svg,.ds-play:focus-visible svg{transform:translateX(4px);}.ds-play:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}.ds-play:active{transform:translateY(1px);}.ds-play--lit{background:var(--accent);color:var(--field);box-shadow:0 8px 18px -8px rgb(0 0 0 / 0.7);}"
+    },
+    {
+      "name": "Unread Badge",
+      "kind": "chip",
+      "refersTo": "badge-unread",
+      "description": "Legends of Loot's own red notification pill, beside its title only.",
+      "html": "<span class=\"ds-dot\">99+</span>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-dot{display:inline-block;padding:0.3em 0.55em;border-radius:999px;background:var(--loot-red);color:#fff;font-family:var(--mono);font-weight:600;font-size:0.75rem;letter-spacing:0.02em;line-height:1;box-shadow:0 3px 6px rgb(0 0 0 / 0.5);}"
+    },
+    {
+      "name": "Keycap Hint",
+      "kind": "chip",
+      "refersTo": "keycap",
+      "description": "Keyboard hints in the controls bar, echoing the in-game hint bar.",
+      "html": "<p class=\"ds-controls\"><span><kbd class=\"ds-kbd\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M10 16V5M5 9l5-5 5 5\"/></svg></kbd><kbd class=\"ds-kbd\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M10 4v11M5 11l5 5 5-5\"/></svg></kbd> choose</span><span><kbd class=\"ds-kbd\">Enter</kbd> play</span></p>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-controls{display:flex;gap:28px;align-items:center;justify-content:center;margin:0;padding:16px;background:var(--ground);font-family:var(--mono);font-stretch:87.5%;font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}.ds-kbd{display:inline-block;min-width:1.9em;margin-right:0.35em;padding:0.2em 0.45em;border:1px solid var(--ink-faint);border-radius:3px;font-family:var(--mono);font-size:0.95em;text-align:center;color:var(--vec-cyan);}.ds-kbd svg{width:1em;height:1em;vertical-align:-0.15em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;}"
+    },
+    {
+      "name": "Top Strip",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Wordmark with blooming wombat glyph on the left, mono tagline on the right, hairline below.",
+      "html": "<header class=\"ds-strip\"><a class=\"ds-mark\" href=\"#\"><svg class=\"ds-glyph\" viewBox=\"0 0 64 40\" aria-hidden=\"true\"><path d=\"M7 31C5 20 13 9 29 9c10 0 17 3 21 8l7 4c3 2 3 6-1 7h-4c-2 3-6 4-10 4H13c-4 0-6-1-6-1Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><path d=\"M45 12c-1-3 1-5 3-4 1 1 2 3 1 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M14 32v5M22 32v5M38 32v5M45 31v6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"51\" cy=\"19\" r=\"1.6\" fill=\"currentColor\"/></svg><span class=\"ds-name\">Zen Wombat</span></a><p class=\"ds-tag\">Small games. Free. In your browser.</p></header>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-strip{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 24px;background:var(--ground);border-bottom:1px solid var(--rule);}.ds-mark{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;}.ds-glyph{width:38px;height:24px;filter:drop-shadow(0 0 6px var(--bloom));}.ds-name{font-family:var(--display);font-weight:700;font-stretch:100%;font-size:1.125rem;letter-spacing:0.14em;text-transform:uppercase;filter:drop-shadow(0 0 6px var(--bloom));}.ds-mark:focus-visible{outline:2px solid var(--vec-cyan);outline-offset:4px;border-radius:2px;}.ds-tag{margin:0;font-family:var(--mono);font-weight:350;font-stretch:87.5%;font-size:0.75rem;letter-spacing:0.04em;color:var(--ink-soft);}"
+    },
+    {
+      "name": "Game Row (selected)",
+      "kind": "card",
+      "refersTo": "",
+      "description": "Signature full-width menu band: cursor ship, accent title, hook, facts, Play, lit in its own field.",
+      "html": "<div class=\"ds-row\"><h2 class=\"ds-title\"><svg class=\"ds-cursor\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M3 3 18 10 3 17 7 10Z\"/></svg><span>Vector</span><span class=\"ds-sub\">Realistic Space Flight</span></h2><p class=\"ds-hook\">Dogfight three AI pilots where momentum is real.</p><ul class=\"ds-facts\"><li>Keyboard or gamepad</li><li>Desktop</li></ul><a class=\"ds-play ds-play--lit\" href=\"#\">Play<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></div>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-row{--accent:var(--vec-cyan);--field:var(--vec-field);display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding:40px 24px 40px 60px;background:var(--field);border-bottom:1px solid var(--rule);transition:background-color 600ms var(--ease-out);}.ds-title{position:relative;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px;row-gap:4px;font-family:var(--display);font-weight:800;font-stretch:85%;font-size:clamp(2.25rem,2.6vw + 1.25rem,4.25rem);line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:var(--accent);}.ds-cursor{position:absolute;left:-36px;top:0.12em;width:22px;height:22px;fill:var(--accent);filter:drop-shadow(0 0 6px color-mix(in srgb,var(--accent) 60%,transparent));}.ds-sub{flex-basis:100%;font-family:var(--mono);font-weight:400;font-stretch:100%;font-size:0.8125rem;letter-spacing:0.12em;line-height:1.4;color:var(--ink-soft);}.ds-hook{margin:0;max-width:40ch;font-family:var(--text);font-weight:400;font-stretch:100%;font-size:1.125rem;line-height:1.5;color:var(--ink);}.ds-facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;font-family:var(--mono);font-stretch:87.5%;font-size:0.6875rem;font-weight:450;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);}.ds-facts li:not(:last-child)::after{content:'/';margin:0 0.9em;color:var(--ink-faint);}.ds-play{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border:1.5px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);font-family:var(--display);font-weight:700;font-stretch:87.5%;font-size:1.125rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:background-color 250ms var(--ease-out),color 250ms var(--ease-out),box-shadow 250ms var(--ease-out);}.ds-play svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;transition:transform 300ms var(--ease-out);}.ds-play:hover svg,.ds-play:focus-visible svg{transform:translateX(4px);}.ds-play:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}.ds-play:active{transform:translateY(1px);}.ds-play--lit{background:var(--accent);color:var(--field);box-shadow:0 8px 18px -8px rgb(0 0 0 / 0.7);}"
+    },
+    {
+      "name": "Footer Link",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Mono footer links with faint underline that turns cyan on hover.",
+      "html": "<nav class=\"ds-foot\"><a href=\"#\">Legends of Loot</a><a href=\"#\">Vector</a></nav>",
+      "css": ":host{--ground:#07090c;--ink:#dcefff;--ink-soft:#9db2c2;--ink-faint:#5d7080;--rule:rgb(150 215 255 / 0.2);--bloom:rgb(150 215 255 / 0.35);--loot-field:#24170c;--loot-gold:#f0c35a;--loot-cream:#f3dfb4;--loot-red:#d92b26;--vec-field:#0a131a;--vec-cyan:#81d4fa;--display:'Tektur','Arial Narrow',sans-serif;--mono:'Martian Mono',ui-monospace,monospace;--text:'Tektur',system-ui,sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);}.ds-foot{display:flex;gap:24px;padding:24px;background:var(--ground);border-top:1px solid var(--rule);font-family:var(--mono);font-weight:350;font-stretch:87.5%;font-size:0.75rem;}.ds-foot a{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--ink-faint);text-underline-offset:4px;}.ds-foot a:hover{color:var(--ink);text-decoration-color:var(--vec-cyan);}.ds-foot a:focus-visible{outline:2px solid var(--vec-cyan);outline-offset:4px;border-radius:2px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Vector Game-Select Screen",
+    "overview": "**Creative North Star: \"The Vector Game-Select Screen\"**\n\nThe studio presents itself as the menu of an old vector-display arcade cabinet. A near-black, blue-tinted tube carries pale phosphor line ink: hairline rules, the wordmark, and a single-stroke wombat glyph that blooms slightly as real phosphor would. At rest a row shows its colour only on its Play outline and its own badge. Each game is a full-width menu row, and the selected row wakes up in that game's own palette: Legends of Loot in brown, gold and a red notification dot, Vector in cyan on a deep teal-black.\n\nDensity is low and deliberate. Two rows fill the first viewport, and each holds one big title, one hook, one line of facts and one Play control, with art on the right. Type does the arcade work: Tektur's squared, condensed display cuts for names and controls, and Martian Mono for everything that reads like data, hints or system text. The chrome stays flat and square. Colour, bloom and motion are reserved for the selection.",
+    "keyCharacteristics": [
+      "Phosphor-on-black ground. Game colour fills a row only when it is selected, and Phosphor Cyan is the single house accent.",
+      "Full-width bands separated by 1px phosphor hairlines, with no cards.",
+      "Squared, uppercase Tektur display; Martian Mono for data, labels and keys.",
+      "Bloom only on line ink (wordmark, wombat glyph, cursor ship).",
+      "Selection is the signature interaction: arrow keys or pointer move a ship cursor, and the row's field, title and Play light up."
+    ],
+    "rules": [
+      {
+        "name": "The Lights-On Rule",
+        "body": "A game's colours stay on its own row. At rest the row carries its accent only on the Play outline and its own badge. Selection lights the field, title, hook and cursor (on narrow screens every row is lit). Shared chrome stays phosphor monochrome, with Phosphor Cyan as its only accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Own-Palette Rule",
+        "body": "Every game row declares its own accent and field. A new game brings its own colours from its own identity. It never borrows another game's colours or invents a studio accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Art-Scope Rule",
+        "body": "Colours inside game art (the Legends of Loot raster, and the Vector canvas's ship colours, amber gravity well and white tracers) belong to the art. They are not UI tokens.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Tektur speaks for names, controls and prose. Martian Mono speaks for data, hints, keys and system text. Never swap them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Full-Width Prose Rule",
+        "body": "Running prose in Tektur is always weight 400 at 100% width. Only display sizes are condensed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Real Subtitle Rule",
+        "body": "A tracked mono line under a title is used only when it is the game's actual subtitle. It is never a decorative label added above or below headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phosphor-Only Glow Rule",
+        "body": "Coloured glow belongs only to stroked line ink: the wordmark, the wombat glyph and the cursor ship. Titles, prose and buttons never get coloured glow or text-shadow. Glow inside game art (the canvas's ships and gravity well) belongs to the art and is not a UI precedent.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every game row its own accent and field taken from that game's identity. At rest show the accent only on Play and the game's own badge, and light the field, title and hook on selection (always lit below 820px).",
+      "Do separate regions with 1px phosphor hairlines (rule) rather than cards, panels or background changes.",
+      "Do set titles in uppercase Tektur 800 at 85% width, and prose in Tektur 400 at 100% width.",
+      "Do use Martian Mono for facts, hints, keys, notes, the tagline and the footer.",
+      "Do keep chrome square, and round only the focus ring (2px), keycaps (3px) and the game's own badge (pill).",
+      "Do set each row's facts as one uppercase mono line, with items split by faint \"/\" separators."
+    ],
+    "donts": [
+      "Don't put coloured glow or text-shadow on titles, prose or buttons. Bloom is for line ink only (wordmark, glyph, cursor).",
+      "Don't add any studio accent beyond Phosphor Cyan. Other colour belongs to the games, on their own rows.",
+      "Don't use ink-faint for text. It is for separators, borders and underlines only.",
+      "Don't lift Vector canvas colours (ship colours, amber well, white tracers) or Legends of Loot raster colours into UI chrome.",
+      "Don't add tracked mono labels above headings. A mono subtitle appears only when it is a game's real subtitle.",
+      "Don't use rounded cards or equal-card grids for games. Games are full-width menu rows."
+    ]
+  }
+}

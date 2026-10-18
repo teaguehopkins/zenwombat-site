@@ -1,0 +1,20 @@
+# zenwombat.com
+
+The Zen Wombat studio homepage: one static page linking to the studio's browser games.
+
+- Legends of Loot: https://legendsofloot.zenwombat.com
+- Vector: https://vector.zenwombat.com
+
+## Run it
+
+```sh
+python3 -m http.server 8080 --directory site   # http://localhost:8080
+```
+
+There is no build step. Pushing to `main` deploys `site/` to GitHub Pages (`.github/workflows/pages.yml`).
+The custom domain comes from `site/CNAME`.
+
+## Adding a game
+
+Add a `<li class="row row--yourgame" data-row>` to the menu in `site/index.html`, give it `--accent` and
+`--field` colours in `site/styles.css`, and add a `VideoGame` entry to the JSON-LD in the page head.

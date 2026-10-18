@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#07090c" />
+    <meta name="color-scheme" content="dark" />
+    <title>Zen Wombat: small games you play in your browser</title>
+    <meta
+      name="description"
+      content="Zen Wombat makes small, free browser games. Clear 99+ notifications in Legends of Loot, or dogfight with real momentum in Vector."
+    />
+    <link rel="canonical" href="https://zenwombat.com/" />
+    <!-- Link previews (Discord, Slack, iMessage, etc.). Image URLs must be absolute. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zen Wombat" />
+    <meta property="og:title" content="Zen Wombat" />
+    <meta
+      property="og:description"
+      content="Small, free games you play in your browser. Legends of Loot and Vector."
+    />
+    <meta property="og:url" content="https://zenwombat.com/" />
+    <meta property="og:image" content="https://zenwombat.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Zen Wombat: a game-select screen with Legends of Loot and Vector."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/tektur-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://zenwombat.com/#studio",
+            "name": "Zen Wombat",
+            "url": "https://zenwombat.com/",
+            "logo": "https://zenwombat.com/favicon.svg"
+          },
+          {
+            "@type": "VideoGame",
+            "name": "Legends of Loot",
+            "url": "https://legendsofloot.zenwombat.com/",
+            "image": "https://legendsofloot.zenwombat.com/og.png",
+            "description": "A satirical browser game about clearing notifications in the launcher of a fantasy card game you never get to play.",
+            "genre": ["Comedy", "Casual"],
+            "playMode": "SinglePlayer",
+            "gamePlatform": "Web browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": "https://zenwombat.com/#studio" }
+          },
+          {
+            "@type": "VideoGame",
+            "name": "Vector: Realistic Space Flight",
+            "url": "https://vector.zenwombat.com/",
+            "image": "https://vector.zenwombat.com/og.png",
+            "description": "A top-down space arena with momentum physics: one pilot against three AI ships, plus a daily slingshot challenge with a global leaderboard.",
+            "genre": ["Action", "Shooter", "Simulation"],
+            "playMode": "SinglePlayer",
+            "gamePlatform": "Web browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": "https://zenwombat.com/#studio" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="strip">
+      <a class="mark" href="/" aria-label="Zen Wombat home">
+        <svg class="mark__glyph" viewBox="0 0 64 40" aria-hidden="true">
+          <use href="#wombat" />
+        </svg>
+        <h1 class="mark__name">Zen Wombat</h1>
+      </a>
+      <p class="strip__tag">Small games. Free. In your browser.</p>
+    </header>
+
+    <main>
+      <ol class="menu" aria-label="Games">
+        <li class="row row--loot is-selected" data-row>
+          <div class="row__text">
+            <h2 class="row__title">
+              <svg class="cursor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3 18 10 3 17 7 10Z" /></svg>
+              <span>Legends of Loot</span>
+              <span class="dot" aria-label="99+ unread">99+</span>
+            </h2>
+            <p class="row__hook">
+              The fantasy card game you'll never get to play. Every menu has a red dot. Clear them all.
+            </p>
+            <ul class="facts" aria-label="Details">
+              <li>5–10 min runs</li>
+              <li>Phone + desktop</li>
+              <li>Touch, mouse, keys</li>
+            </ul>
+            <a class="play" href="https://legendsofloot.zenwombat.com/" data-play>
+              Play<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>
+            </a>
+          </div>
+          <a class="row__art" href="https://legendsofloot.zenwombat.com/" tabindex="-1" aria-hidden="true">
+            <img
+              src="img/legends-of-loot.webp"
+              width="600"
+              height="500"
+              alt=""
+              decoding="async"
+            />
+          </a>
+        </li>
+
+        <li class="row row--vector" data-row>
+          <div class="row__text">
+            <h2 class="row__title">
+              <svg class="cursor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3 18 10 3 17 7 10Z" /></svg>
+              <span>Vector</span>
+              <span class="row__sub">Realistic Space Flight</span>
+            </h2>
+            <p class="row__hook">
+              Dogfight three AI pilots where momentum is real. Slingshot around gravity wells in the daily challenge.
+            </p>
+            <ul class="facts" aria-label="Details">
+              <li>Keyboard or gamepad</li>
+              <li>Desktop</li>
+              <li>Daily leaderboard</li>
+            </ul>
+            <a class="play" href="https://vector.zenwombat.com/" data-play>
+              Play<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>
+            </a>
+            <p class="row__note">The server naps when idle, so the first load can take a minute.</p>
+          </div>
+          <a class="row__art" href="https://vector.zenwombat.com/" tabindex="-1" aria-hidden="true">
+            <canvas class="orbit" data-orbit></canvas>
+          </a>
+        </li>
+      </ol>
+
+      <p class="controls" aria-hidden="true">
+        <span><kbd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V5M5 9l5-5 5 5" /></svg></kbd><kbd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v11M5 11l5 5 5-5" /></svg></kbd> choose</span>
+        <span><kbd>Enter</kbd> play</span>
+      </p>
+
+      <section class="about" aria-labelledby="about-title">
+        <svg class="about__wombat" viewBox="0 0 64 40" aria-hidden="true">
+          <use href="#wombat" />
+        </svg>
+        <div class="about__text">
+          <h2 id="about-title">A very small studio</h2>
+          <p>
+            Zen Wombat makes short games that run in a browser tab. No downloads, no accounts, no ads. Each one takes a
+            single idea and follows it all the way: a launcher made entirely of notifications, a dogfight where
+            stopping takes as much thrust as starting.
+          </p>
+          <p>We're named after the calmest animal we know. Press play whenever you like.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>© 2026 Zen Wombat</p>
+      <nav aria-label="Games">
+        <a href="https://legendsofloot.zenwombat.com/">Legends of Loot</a>
+        <a href="https://vector.zenwombat.com/">Vector</a>
+      </nav>
+    </footer>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="wombat" viewBox="0 0 64 40">
+        <path
+          d="M7 31C5 20 13 9 29 9c10 0 17 3 21 8l7 4c3 2 3 6-1 7h-4c-2 3-6 4-10 4H13c-4 0-6-1-6-1Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linejoin="round"
+        />
+        <path d="M45 12c-1-3 1-5 3-4 1 1 2 3 1 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+        <path d="M14 32v5M22 32v5M38 32v5M45 31v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        <circle cx="51" cy="19" r="1.6" fill="currentColor" />
+      </symbol>
+    </svg>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

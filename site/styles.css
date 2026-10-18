@@ -1,0 +1,626 @@
+@font-face {
+  font-family: 'Tektur';
+  src: url('fonts/tektur-latin.woff2') format('woff2');
+  font-weight: 400 900;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('fonts/martian-mono-latin.woff2') format('woff2');
+  font-weight: 300 600;
+  font-stretch: 75% 112.5%;
+  font-display: swap;
+}
+
+:root {
+  /* Vector display: phosphor ink on a blue-black tube */
+  --ground: #07090c;
+  --ink: #dcefff;
+  --ink-soft: #9db2c2;
+  --ink-faint: #5d7080;
+  --rule: rgb(150 215 255 / 0.2);
+  --bloom: rgb(150 215 255 / 0.35);
+
+  /* Legends of Loot */
+  --loot-field: #24170c;
+  --loot-gold: #f0c35a;
+  --loot-cream: #f3dfb4;
+  --loot-red: #d92b26;
+
+  /* Vector */
+  --vec-field: #0a131a;
+  --vec-cyan: #81d4fa;
+
+  --display: 'Tektur', 'Arial Narrow', sans-serif;
+  --mono: 'Martian Mono', ui-monospace, monospace;
+  --text: 'Tektur', system-ui, sans-serif;
+
+  --gutter: clamp(16px, 5vw, 72px);
+  --strip-h: 64px;
+  --bar-h: 52px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scrollbar-color: var(--ink-faint) var(--ground);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-weight: 350;
+  font-stretch: 87.5%;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  caret-color: var(--vec-cyan);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--vec-cyan);
+  color: var(--ground);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent, var(--vec-cyan));
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ---------- Top strip ---------- */
+
+.strip {
+  height: var(--strip-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 var(--gutter);
+  border-bottom: 1px solid var(--rule);
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.mark__glyph {
+  width: 38px;
+  height: 24px;
+  filter: drop-shadow(0 0 6px var(--bloom));
+}
+
+.mark__name {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 100%;
+  font-size: 1.125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 6px var(--bloom));
+}
+
+.strip__tag {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+/* ---------- Game-select menu ---------- */
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  --accent: var(--ink);
+  --field: var(--ground);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  min-height: max(340px, calc((100svh - var(--strip-h) - var(--bar-h)) / 2));
+  border-bottom: 1px solid var(--rule);
+  background: var(--ground);
+  transition: background-color 600ms var(--ease-out);
+}
+
+.row--loot {
+  --accent: var(--loot-gold);
+  --field: var(--loot-field);
+}
+
+.row--vector {
+  --accent: var(--vec-cyan);
+  --field: var(--vec-field);
+}
+
+.row.is-selected {
+  background: var(--field);
+}
+
+.row__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 40px var(--gutter);
+  padding-left: calc(var(--gutter) + 36px);
+}
+
+.row__title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 4px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 85%;
+  font-size: clamp(2.25rem, 2.6vw + 1.25rem, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  transition: color 400ms var(--ease-out);
+}
+
+.is-selected .row__title {
+  color: var(--accent);
+}
+
+.row__sub {
+  flex-basis: 100%;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+/* The selection cursor is a little vector ship */
+.cursor {
+  position: absolute;
+  left: -36px;
+  top: 0.12em;
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 300ms var(--ease-out), transform 500ms var(--ease-out);
+}
+
+.is-selected .cursor {
+  opacity: 1;
+  transform: none;
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 60%, transparent));
+}
+
+.dot {
+  align-self: flex-start;
+  padding: 0.3em 0.55em;
+  border-radius: 999px;
+  background: var(--loot-red);
+  color: #fff;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-shadow: none;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.5);
+  transform: translateY(-0.2em);
+}
+
+.row__hook {
+  margin: 0;
+  max-width: 40ch;
+  font-family: var(--text);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  transition: color 400ms var(--ease-out);
+}
+
+.is-selected .row__hook {
+  color: var(--ink);
+}
+
+.row--loot.is-selected .row__hook {
+  color: var(--loot-cream);
+}
+
+.facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.6875rem;
+  font-weight: 450;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.facts li:not(:last-child)::after {
+  content: '/';
+  margin: 0 0.9em;
+  color: var(--ink-faint);
+}
+
+.play {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 48px;
+  padding: 0 22px 0 26px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color 250ms var(--ease-out),
+    color 250ms var(--ease-out),
+    box-shadow 250ms var(--ease-out);
+}
+
+.play svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+  transition: transform 300ms var(--ease-out);
+}
+
+.is-selected .play {
+  background: var(--accent);
+  color: var(--field);
+  box-shadow: 0 8px 18px -8px rgb(0 0 0 / 0.7);
+}
+
+.play:hover svg,
+.play:focus-visible svg {
+  transform: translateX(4px);
+}
+
+.play:active {
+  transform: translateY(1px);
+}
+
+/* Art panels */
+
+.row__art {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-left: 1px solid var(--rule);
+  transition: opacity 500ms var(--ease-out), filter 500ms var(--ease-out);
+}
+
+.row--loot .row__art {
+  background: #21150b;
+}
+
+.row--loot .row__art img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  --fade: linear-gradient(90deg, transparent 0, #000 26%, #000 74%, transparent 100%),
+    linear-gradient(180deg, transparent 0, #000 10%, #000 90%, transparent 100%);
+  -webkit-mask-image: var(--fade);
+  -webkit-mask-composite: source-in;
+  mask-image: var(--fade);
+  mask-composite: intersect;
+}
+
+.row--vector .row__art {
+  background: #080c10;
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .row:not(.is-selected) .row__art {
+    opacity: 0.72;
+    filter: saturate(0.7);
+  }
+}
+
+.row__note {
+  margin: -6px 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Controls bar, echoing the in-game hint bar */
+
+.controls {
+  height: var(--bar-h);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.9em;
+  margin-right: 0.35em;
+  padding: 0.2em 0.45em;
+  border: 1px solid var(--ink-faint);
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 0.95em;
+  text-align: center;
+  color: var(--vec-cyan);
+}
+
+kbd svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .controls {
+    display: none;
+  }
+}
+
+/* ---------- About ---------- */
+
+.about {
+  display: grid;
+  grid-template-columns: auto minmax(0, 62ch);
+  justify-content: center;
+  align-items: start;
+  gap: clamp(28px, 6vw, 96px);
+  padding: clamp(80px, 12vw, 160px) var(--gutter) clamp(64px, 9vw, 120px);
+}
+
+.about__wombat {
+  width: clamp(120px, 16vw, 220px);
+  height: auto;
+  aspect-ratio: 64 / 40;
+  color: var(--ink);
+  filter: drop-shadow(0 0 10px var(--bloom));
+}
+
+.about h2 {
+  margin: 0 0 20px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 90%;
+  font-size: clamp(1.75rem, 1.6vw + 1rem, 2.5rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.about p {
+  margin: 0 0 1em;
+  font-family: var(--text);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.about p:last-child {
+  color: var(--ink);
+}
+
+/* ---------- Footer ---------- */
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 24px var(--gutter) calc(24px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--rule);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.foot p {
+  margin: 0;
+}
+
+.foot nav {
+  display: flex;
+  gap: 24px;
+}
+
+.foot a {
+  text-decoration: underline;
+  text-decoration-color: var(--ink-faint);
+  text-underline-offset: 4px;
+}
+
+.foot a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--vec-cyan);
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 820px) {
+  :root {
+    --strip-h: 56px;
+  }
+
+  .strip {
+    height: auto;
+    min-height: var(--strip-h);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .strip__tag {
+    font-size: 0.6875rem;
+  }
+
+  .controls {
+    display: none;
+  }
+
+
+  .row {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    background: var(--field);
+  }
+
+  .row__art {
+    order: -1;
+    aspect-ratio: 5 / 2;
+    border-left: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .row__text {
+    padding: 28px var(--gutter) 40px;
+    gap: 14px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .row .row__title {
+    color: var(--accent);
+  }
+
+  .row .play {
+    align-self: stretch;
+    justify-content: center;
+    background: var(--accent);
+    color: var(--field);
+  }
+
+  .row--loot .row__hook {
+    color: var(--loot-cream);
+  }
+
+  .row--vector .row__hook {
+    color: var(--ink);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 72px;
+  }
+
+  .about__wombat {
+    width: 112px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- 404 ---------- */
+
+.lost {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 var(--gutter);
+  --accent: var(--vec-cyan);
+  --field: var(--ground);
+}
+
+.lost h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 85%;
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--vec-cyan);
+}
+
+.lost p {
+  margin: 0;
+  font-family: var(--text);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 1.125rem;
+  color: var(--ink-soft);
+}
