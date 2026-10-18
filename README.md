@@ -12,7 +12,8 @@ python3 -m http.server 8080 --directory site   # http://localhost:8080
 ```
 
 There is no build step. Pushing to `main` deploys `site/` to GitHub Pages (`.github/workflows/pages.yml`).
-The custom domain comes from `site/CNAME`.
+Because it deploys through Actions, the custom domain (`zenwombat.com`) is set in the repo's Pages settings;
+`site/CNAME` is only a record of it.
 
 ## Adding a game
 
