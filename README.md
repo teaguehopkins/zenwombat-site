@@ -4,6 +4,7 @@ The Zen Wombat studio homepage: one static page linking to the studio's browser 
 
 - Legends of Loot: https://legendsofloot.zenwombat.com
 - Vector: https://vector.zenwombat.com
+- Save the Art: coming soon (no link yet)
 
 ## Run it
 
@@ -19,3 +20,6 @@ Because it deploys through Actions, the custom domain (`zenwombat.com`) is set i
 
 Add a `<li class="row row--yourgame" data-row>` to the menu in `site/index.html`, give it `--accent` and
 `--field` colours in `site/styles.css`, and add a `VideoGame` entry to the JSON-LD in the page head.
+
+A game that isn't out yet gets the same row without `data-play`: a `.stamp` badge in the title and a `.soon` status line
+where Play would be, with `tabindex="-1"` on the `<li>` so the arrow keys can still land on it.

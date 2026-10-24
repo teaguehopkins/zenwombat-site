@@ -33,6 +33,12 @@
   --vec-field: #0a131a;
   --vec-cyan: #81d4fa;
 
+  /* Save the Art: gilt and a rubber stamp in the gallery's lamplight */
+  --art-field: #1d170d;
+  --art-gilt: #d4ac2e;
+  --art-ivory: #efe6d2;
+  --art-stamp: #e0574a;
+
   --display: 'Tektur', 'Arial Narrow', sans-serif;
   --mono: 'Martian Mono', ui-monospace, monospace;
   --text: 'Tektur', system-ui, sans-serif;
@@ -157,8 +163,18 @@ a {
   --field: var(--vec-field);
 }
 
+.row--save {
+  --accent: var(--art-gilt);
+  --field: var(--art-field);
+}
+
 .row.is-selected {
   background: var(--field);
+}
+
+/* The row itself takes focus when it has no Play; selection already shows it */
+.row:focus-visible {
+  outline: none;
 }
 
 .row__text {
@@ -241,6 +257,22 @@ a {
   transform: translateY(-0.2em);
 }
 
+/* Save the Art's kicker: red ink, a little crooked, as the game stamps its files */
+.stamp {
+  align-self: center;
+  padding: 0.35em 0.6em 0.3em;
+  border: 1.5px solid var(--art-stamp);
+  border-radius: 2px;
+  color: var(--art-stamp);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  transform: rotate(-3deg);
+}
+
 .row__hook {
   margin: 0;
   max-width: 40ch;
@@ -259,6 +291,10 @@ a {
 
 .row--loot.is-selected .row__hook {
   color: var(--loot-cream);
+}
+
+.row--save.is-selected .row__hook {
+  color: var(--art-ivory);
 }
 
 .facts {
@@ -340,7 +376,12 @@ a {
   background: #21150b;
 }
 
-.row--loot .row__art img {
+.row--save .row__art {
+  background: #0f0c07;
+}
+
+.row--loot .row__art img,
+.row--save .row__art img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -373,6 +414,30 @@ a {
     opacity: 0.72;
     filter: saturate(0.7);
   }
+}
+
+/* Stands where Play would: a status line, not a control */
+.soon {
+  margin: 6px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  font-size: 0.75rem;
+  font-weight: 450;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.soon::before {
+  content: '';
+  width: 28px;
+  border-top: 1.5px dashed var(--ink-faint);
+}
+
+.is-selected .soon {
+  color: var(--accent);
 }
 
 .row__note {
@@ -570,6 +635,14 @@ kbd svg {
 
   .row--vector .row__hook {
     color: var(--ink);
+  }
+
+  .row--save .row__hook {
+    color: var(--art-ivory);
+  }
+
+  .row .soon {
+    color: var(--accent);
   }
 
   .about {

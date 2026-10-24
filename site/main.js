@@ -5,7 +5,8 @@ let selected = 0;
 function select(i, { focus = false } = {}) {
   selected = i;
   rows.forEach((row, j) => row.classList.toggle('is-selected', j === selected));
-  if (focus) rows[selected].querySelector('[data-play]').focus({ preventScroll: false });
+  // A coming-soon row has no Play, so the row itself takes focus
+  if (focus) (rows[selected].querySelector('[data-play]') ?? rows[selected]).focus({ preventScroll: false });
 }
 
 rows.forEach((row, i) => {
@@ -32,7 +33,7 @@ document.addEventListener('keydown', (e) => {
     e.preventDefault();
     select(next, { focus: true });
   } else if (e.key === 'Enter' && !inMenu) {
-    rows[selected].querySelector('[data-play]').click();
+    rows[selected].querySelector('[data-play]')?.click();
   }
 });
 
