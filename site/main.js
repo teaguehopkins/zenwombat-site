@@ -2,16 +2,19 @@
 const rows = [...document.querySelectorAll('[data-row]')];
 let selected = 0;
 
-function select(i, { focus = false } = {}) {
+function select(i, { focus = false, preventScroll = false } = {}) {
   selected = i;
   rows.forEach((row, j) => row.classList.toggle('is-selected', j === selected));
   // A coming-soon row has no Play, so the row itself takes focus
-  if (focus) (rows[selected].querySelector('[data-play]') ?? rows[selected]).focus({ preventScroll: false });
+  if (focus) (rows[selected].querySelector('[data-play]') ?? rows[selected]).focus({ preventScroll });
 }
 
 rows.forEach((row, i) => {
   row.addEventListener('pointerenter', (e) => {
-    if (e.pointerType === 'mouse') select(i);
+    if (e.pointerType !== 'mouse') return;
+    // If focus is already in the menu, it follows the mouse, so Enter plays the row that's lit
+    const active = document.activeElement;
+    select(i, { focus: rows.some((r) => r.contains(active)) && !row.contains(active), preventScroll: true });
   });
   row.addEventListener('focusin', () => select(i));
 });
