@@ -1,4 +1,4 @@
 {
-  "prompt": "Origin: crop (x600 y70 600x500) of the Legends of Loot key art at ~/notif-game/public/og.png (pre-existing studio asset), re-encoded to WebP via Chromium canvas.\n",
-  "createdAt": "2026-10-18T23:13:10.873Z"
+  "prompt": "Origin: 600x500 composition of the Legends of Loot launcher tiles, built from the game's own markup and stylesheet (~/notif-game/src/styles/app.css, Cinzel + Nunito from its @fontsource packages, Noto Color Emoji for the icons) laid out to match the og.png key art, rendered in headless Chrome at deviceScaleFactor 2.4 (1440x1200) with animations disabled, encoded to WebP (q0.82) via Chromium canvas.\n",
+  "createdAt": "2026-10-25T13:15:00.000Z"
 }

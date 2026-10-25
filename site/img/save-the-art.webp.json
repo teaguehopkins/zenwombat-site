@@ -1,4 +1,4 @@
 {
-  "prompt": "Origin: crop (x90 y40 720x600, scaled to 600x500) of the Save the Art release screenshot ~/save-the-art/screenshots/release/05-raid.png (the itch.io screenshot set), re-encoded to WebP via Chromium canvas.\n",
-  "createdAt": "2026-10-24T14:08:00.000Z"
+  "prompt": "Origin: crop (x300 y432 1440x1200) of the first raid of a new run (player walked south ~1s) in ~/save-the-art/dist, played in headless Chrome at a 3200x1800 viewport so RaidScene's camera zooms to 2x (a native-resolution capture, no scaling), encoded to WebP (q0.9) via Chromium canvas.\n",
+  "createdAt": "2026-10-25T13:15:00.000Z"
 }
