@@ -219,3 +219,21 @@ if (canvas) {
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
   reduceMotion.addEventListener('change', () => (reduceMotion.matches ? stop() : start()));
 }
+
+// Save the Art's looping raid clip plays under the same rules as the orbit: only on screen, in a
+// visible tab, and never with reduced motion (preload="none" means it isn't even downloaded then).
+const clip = document.querySelector('[data-clip]');
+if (clip) {
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let inView = false;
+  const update = () => {
+    if (inView && !document.hidden && !reduceMotion.matches) clip.play().catch(() => {});
+    else clip.pause();
+  };
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    update();
+  }).observe(clip);
+  document.addEventListener('visibilitychange', update);
+  reduceMotion.addEventListener('change', update);
+}

@@ -1,4 +1,4 @@
 {
-  "prompt": "Origin: crop (x300 y432 1440x1200) of the first raid of a new run (player walked south ~1s) in ~/save-the-art/dist, played in headless Chrome at a 3200x1800 viewport so RaidScene's camera zooms to 2x (a native-resolution capture, no scaling), encoded to WebP (q0.9) via Chromium canvas.\n",
-  "createdAt": "2026-10-25T13:15:00.000Z"
+  "prompt": "Origin: first frame of save-the-art.mp4 at full capture resolution (crop x118 y235 1440x1200 of the game canvas at a 2560x1440 viewport, camera zoom 2x), so the poster matches the clip's first frame. Encoded to WebP (q0.9) via Chromium canvas.\n",
+  "createdAt": "2026-10-25T14:08:00.000Z"
 }

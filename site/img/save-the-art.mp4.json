@@ -1,0 +1,4 @@
+{
+  "prompt": "Origin: 5 s seamless loop recorded from the first raid of a new run in ~/save-the-art (Vite dev server) in headless Chrome at 2560x1440 (RaidScene camera zoom 2x). A Playwright fake clock stepped the game one 30 fps frame at a time; the test bot (tests/bot.ts, 'reckless') played, with player and guard health topped up so the fight and the guards' lamps last the clip. Camera locked at the bot's first shot; crop 1440x1200 centred between the player and the nearest guard, scaled to 1080x900. The last 15 frames crossfade into the first. Encoded H.264 High (avc1.640028, 1.8 Mbps, keyframe every 2 s) with WebCodecs, muxed with mp4-muxer 5.2.2 (fast start).\n",
+  "createdAt": "2026-10-25T14:08:00.000Z"
+}

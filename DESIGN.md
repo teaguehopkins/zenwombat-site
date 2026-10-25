@@ -247,7 +247,7 @@ Each row is a full-width band that sets its own accent and field.
 - **At rest:** tube-black ground, dim title, dim hook, and art dimmed on pointer devices.
 - **Selected:** the field fades in over 600ms, the title takes the accent over 400ms, and the hook brightens to ink (cream on Legends of Loot). The cursor ship slides in from 10px left with an accent bloom.
 - **Contents, in order:** title (with an optional real subtitle or badge), hook, a facts line split by faint "/" separators, Play, and an optional mono note.
-- **Art panel:** sits on a hairline divider. Legends of Loot uses key art masked to fade at its edges. Vector uses a live canvas of its four ships orbiting a gravity well.
+- **Art panel:** sits on a hairline divider. Legends of Loot uses key art masked to fade at its edges. Vector uses a live canvas of its four ships orbiting a gravity well. Save the Art uses a muted 5s loop of a raid, with the same edge mask, poster frame and play rules as the canvas (on screen, visible tab, never under reduced motion).
 - **Motion:** all motion uses ease-out cubic-bezier(0.16, 1, 0.3, 1). Under reduced motion, transitions collapse to near zero.
 
 ## Do's and Don'ts
