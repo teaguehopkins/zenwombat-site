@@ -2,9 +2,9 @@
 
 The Zen Wombat studio homepage: one static page linking to the studio's browser games.
 
+- Save the Art: https://zenwombat.itch.io/save-the-art
 - Legends of Loot: https://legendsofloot.zenwombat.com
 - Vector: https://vector.zenwombat.com
-- Save the Art: coming soon (no link yet)
 
 ## Run it
 
