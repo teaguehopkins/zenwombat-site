@@ -282,19 +282,30 @@ a {
   transform: rotate(-3deg);
 }
 
-/* Fixed Point's kicker: a solid tag with one corner cut, like the game's chamfered panels */
+/* Fixed Point's status: a small outlined callout, a dot and mono caps, kept quieter than the title */
 .cut {
   align-self: center;
-  padding: 0.4em 0.9em 0.35em 0.6em;
-  background: var(--fixed-violet);
-  color: var(--fixed-field);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.45em 0.7em;
+  border: 1px solid color-mix(in srgb, var(--fixed-violet) 55%, transparent);
+  color: var(--fixed-violet);
   font-family: var(--mono);
-  font-weight: 600;
+  font-weight: 500;
   font-stretch: 100%;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   letter-spacing: 0.14em;
   line-height: 1;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%);
+  white-space: nowrap;
+}
+
+.cut::before {
+  content: '';
+  width: 0.55em;
+  height: 0.55em;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 55% 100%, 0 100%);
 }
 
 .row__hook {

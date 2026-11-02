@@ -135,7 +135,7 @@ The palette is a cold phosphor monochrome that hands over to each game's own col
 
 ### Primary
 - **Loot Gold** (loot-gold): Legends of Loot's accent. Used for the selected title, the Play outline and fill, and the cursor ship on that row.
-- **Ghost Violet** (fixed-violet): Fixed Point's accent, the violet of its second ghost (history itself is a duller violet in the game). Used for the selected title, Play, the cursor ship and its solid Public beta tag, whose bottom-right corner is cut like the game's chamfered panels. Cyan (the game's system light) and gold (its live player) belong to Vector and Save the Art here.
+- **Ghost Violet** (fixed-violet): Fixed Point's accent, the violet of its second ghost (history itself is a duller violet in the game). Used for the selected title, Play, the cursor ship and its Public beta callout: a small outline in mono caps, led by a dot with one corner cut like the game's chamfered panels. Cyan (the game's system light) and gold (its live player) belong to Vector and Save the Art here.
 - **Phosphor Cyan** (vec-cyan): Vector's accent, and the house default accent when no game owns the surface (404, focus fallback, selection highlight, keycap glyphs, caret, footer link hover).
 
 ### Secondary
