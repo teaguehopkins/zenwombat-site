@@ -14,6 +14,12 @@ colors:
   loot-red: "#d92b26"
   vec-field: "#0a131a"
   vec-cyan: "#81d4fa"
+  art-field: "#1d170d"
+  art-gilt: "#d4ac2e"
+  art-ivory: "#efe6d2"
+  art-stamp: "#e0574a"
+  fixed-field: "#120f1d"
+  fixed-violet: "#b18cff"
 typography:
   display:
     fontFamily: "Tektur, 'Arial Narrow', sans-serif"
@@ -129,6 +135,7 @@ The palette is a cold phosphor monochrome that hands over to each game's own col
 
 ### Primary
 - **Loot Gold** (loot-gold): Legends of Loot's accent. Used for the selected title, the Play outline and fill, and the cursor ship on that row.
+- **Ghost Violet** (fixed-violet): Fixed Point's accent, the violet of its second ghost (history itself is a duller violet in the game). Used for the selected title, Play, the cursor ship and its solid Public beta tag, whose bottom-right corner is cut like the game's chamfered panels. Cyan (the game's system light) and gold (its live player) belong to Vector and Save the Art here.
 - **Phosphor Cyan** (vec-cyan): Vector's accent, and the house default accent when no game owns the surface (404, focus fallback, selection highlight, keycap glyphs, caret, footer link hover).
 
 ### Secondary
@@ -142,7 +149,7 @@ The palette is a cold phosphor monochrome that hands over to each game's own col
 - **Faint Phosphor** (ink-faint): non-text only (about 3.9:1 on ground). Used for fact separators, keycap borders, footer link underlines and the scrollbar thumb.
 - **Phosphor Rule** (rule): every hairline: the strip, row and art dividers, the controls bar and the footer.
 - **Phosphor Bloom** (bloom): the drop-shadow colour for line-ink bloom.
-- **Loot Field** (loot-field) and **Vector Field** (vec-field): each row's lit background, shown only when the row is selected (and always on narrow screens).
+- **Loot Field** (loot-field), **Vector Field** (vec-field) and **Fixed Field** (fixed-field): each row's lit background, shown only when the row is selected (and always on narrow screens).
 
 ### Named Rules
 **The Lights-On Rule.** A game's colours stay on its own row. At rest the row carries its accent only on the Play outline and its own badge. Selection lights the field, title, hook and cursor (on narrow screens every row is lit). Shared chrome stays phosphor monochrome, with Phosphor Cyan as its only accent.
@@ -247,7 +254,7 @@ Each row is a full-width band that sets its own accent and field.
 - **At rest:** tube-black ground, dim title, dim hook, and art dimmed on pointer devices.
 - **Selected:** the field fades in over 600ms, the title takes the accent over 400ms, and the hook brightens to ink (cream on Legends of Loot). The cursor ship slides in from 10px left with an accent bloom.
 - **Contents, in order:** title (with an optional real subtitle or badge), hook, a facts line split by faint "/" separators, Play, and an optional mono note.
-- **Art panel:** sits on a hairline divider. Legends of Loot uses key art masked to fade at its edges. Vector uses a live canvas of its four ships orbiting a gravity well. Save the Art uses a muted 5s loop of a raid, with the same edge mask, poster frame and play rules as the canvas (on screen, visible tab, never under reduced motion).
+- **Art panel:** sits on a hairline divider. Legends of Loot uses key art masked to fade at its edges, and Fixed Point a still from its timeline replay (four ghosts on the catwalk) under the same mask. Vector uses a live canvas of its four ships orbiting a gravity well. Save the Art uses a muted 5s loop of a raid, with the same edge mask, poster frame and play rules as the canvas (on screen, visible tab, never under reduced motion).
 - **Motion:** all motion uses ease-out cubic-bezier(0.16, 1, 0.3, 1). Under reduced motion, transitions collapse to near zero.
 
 ## Do's and Don'ts

@@ -39,6 +39,10 @@
   --art-ivory: #efe6d2;
   --art-stamp: #e0574a;
 
+  /* Fixed Point: its second ghost's violet (the game draws history in a duller one) on a night-time station */
+  --fixed-field: #120f1d;
+  --fixed-violet: #b18cff;
+
   --display: 'Tektur', 'Arial Narrow', sans-serif;
   --mono: 'Martian Mono', ui-monospace, monospace;
   --text: 'Tektur', system-ui, sans-serif;
@@ -168,6 +172,11 @@ a {
   --field: var(--art-field);
 }
 
+.row--fixed {
+  --accent: var(--fixed-violet);
+  --field: var(--fixed-field);
+}
+
 .row.is-selected {
   background: var(--field);
 }
@@ -271,6 +280,21 @@ a {
   letter-spacing: 0.14em;
   line-height: 1;
   transform: rotate(-3deg);
+}
+
+/* Fixed Point's kicker: a solid tag with one corner cut, like the game's chamfered panels */
+.cut {
+  align-self: center;
+  padding: 0.4em 0.9em 0.35em 0.6em;
+  background: var(--fixed-violet);
+  color: var(--fixed-field);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-stretch: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%);
 }
 
 .row__hook {
@@ -380,8 +404,13 @@ a {
   background: #0f0c07;
 }
 
+.row--fixed .row__art {
+  background: #0b0f17;
+}
+
 .row--loot .row__art img,
-.row--save .row__art video {
+.row--save .row__art video,
+.row--fixed .row__art img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -641,6 +670,10 @@ kbd svg {
 
   .row--save .row__hook {
     color: var(--art-ivory);
+  }
+
+  .row--fixed .row__hook {
+    color: var(--ink);
   }
 
   .row .soon {

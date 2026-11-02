@@ -1,0 +1,4 @@
+{
+  "prompt": "Origin: Fixed Point's timeline replay at 0:42.5 of a full four-slot Carry run on Uplink Station (seed 4242), each slot played by the game's test bots (tests/bot.ts: runnerBot for slot 1, squadBot for 2-3, guardBot for 4) at ~/time-game HEAD d980475 and imported into the deployed build at fixedpoint.pages.dev. Rendered in headless Chrome at a 3200x1800 viewport (native 2x of the 1600x900 layout; the game canvas ignores deviceScaleFactor), crop x1490 y220 1440x1200 on the catwalk: all four ghosts, a sapper on Dev, a medkit and ammo. Encoded to WebP (q0.9) via Chromium canvas.\n",
+  "createdAt": "2026-11-02T18:38:00.000Z"
+}

@@ -8,7 +8,7 @@
     <title>Zen Wombat: small games you play in your browser</title>
     <meta
       name="description"
-      content="Zen Wombat makes small, free browser games. Recover a stolen art collection in Save the Art, clear 99+ notifications in Legends of Loot, or dogfight with real momentum in Vector."
+      content="Zen Wombat makes small, free browser games. Take turns keeping each other's ghosts alive in Fixed Point, recover a stolen art collection in Save the Art, clear 99+ notifications in Legends of Loot, or dogfight with real momentum in Vector."
     />
     <link rel="canonical" href="https://zenwombat.com/" />
     <!-- Link previews (Discord, Slack, iMessage, etc.). Image URLs must be absolute. -->
@@ -17,15 +17,15 @@
     <meta property="og:title" content="Zen Wombat" />
     <meta
       property="og:description"
-      content="Small, free games you play in your browser. Save the Art, Legends of Loot and Vector."
+      content="Small, free games you play in your browser. Fixed Point, Save the Art, Legends of Loot and Vector."
     />
     <meta property="og:url" content="https://zenwombat.com/" />
-    <meta property="og:image" content="https://zenwombat.com/og.png?v=2" />
+    <meta property="og:image" content="https://zenwombat.com/og.png?v=4" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Zen Wombat: a game-select screen with Save the Art, Legends of Loot and Vector."
+      content="Zen Wombat: a game-select screen with Fixed Point, Save the Art, Legends of Loot and Vector."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -41,6 +41,20 @@
             "name": "Zen Wombat",
             "url": "https://zenwombat.com/",
             "logo": "https://zenwombat.com/favicon.svg"
+          },
+          {
+            "@type": "VideoGame",
+            "name": "Fixed Point",
+            "url": "https://fixedpoint.pages.dev/",
+            "image": "https://zenwombat.com/img/fixed-point.webp",
+            "description": "An asynchronous co-op time-loop shooter: friends take turns through one shared link, and every earlier player replays as a ghost the next one has to keep alive.",
+            "genre": ["Action", "Shooter"],
+            "playMode": ["CoOp", "MultiPlayer"],
+            "gamePlatform": "Web browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": "https://zenwombat.com/#studio" }
           },
           {
             "@type": "VideoGame",
@@ -102,12 +116,36 @@
 
     <main>
       <ol class="menu" aria-label="Games">
-        <li class="row row--save is-selected" data-row>
+        <li class="row row--fixed is-selected" data-row>
+          <div class="row__text">
+            <h2 class="row__title">
+              <svg class="cursor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3 18 10 3 17 7 10Z" /></svg>
+              <span>Fixed Point</span>
+              <span class="cut">Public beta</span>
+            </h2>
+            <p class="row__hook">
+              Take turns through one shared link. Everyone who played before you replays as a ghost, and they're
+              already dead unless you save them.
+            </p>
+            <ul class="facts" aria-label="Details">
+              <li>Async co-op, 1–4 players</li>
+              <li>Desktop</li>
+              <li>Mouse + keys or gamepad</li>
+            </ul>
+            <a class="play" href="https://fixedpoint.pages.dev/" data-play>
+              Play<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" /></svg>
+            </a>
+          </div>
+          <a class="row__art" href="https://fixedpoint.pages.dev/" tabindex="-1" aria-hidden="true">
+            <img src="img/fixed-point.webp" width="600" height="500" alt="" decoding="async" />
+          </a>
+        </li>
+
+        <li class="row row--save" data-row>
           <div class="row__text">
             <h2 class="row__title">
               <svg class="cursor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3 18 10 3 17 7 10Z" /></svg>
               <span>Save the Art</span>
-              <span class="stamp">Out now</span>
             </h2>
             <p class="row__hook">
               1944. Recover a stolen collection from the guards packing and burning it. Every bullet you fire might go
@@ -207,10 +245,11 @@
           <h2 id="about-title">A very small studio</h2>
           <p>
             Zen Wombat makes short games that run in a browser tab. No downloads, no accounts, no ads. Each one takes a
-            single idea and follows it all the way: a launcher made entirely of notifications, a dogfight where
-            stopping takes as much thrust as starting.
+            single idea and follows it all the way: a co-op shooter played in turns, guarding the ghosts of everyone
+            who went before you; a raid where any stray bullet might hit a Rembrandt; a launcher made entirely of
+            notifications; a dogfight where stopping takes as much thrust as starting.
           </p>
-          <p>We're named after the calmest animal we know. Press play whenever you like.</p>
+          <p>We're named after the chillest animal you'll meet. Press play whenever you like.</p>
         </div>
       </section>
     </main>
